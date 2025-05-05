@@ -9,22 +9,44 @@ const Projects = () => {
           title: "Financial Management Tool",
           tech: ["React", "Firebase", "Recharts"],
           description:
-            "A tool to manage budgets and visualize data using Firebase and Recharts.",
+            "Budget management; Interactive pie & line charts; Real-time filtering",
           link: "https://personal-finance-app-amber.vercel.app/",
+        },
+        {
+          title: "Stock Data Dashboard",
+          tech: ["Python", "FastAPI", "React"],
+          description:
+            "Historical prices & analyst ratings; News sentiment word clouds; Interactive Recharts graphs",
+          link: "https://stock-two-alpha.vercel.app/",
         },
         {
           title: "Trip Map Tracker",
           tech: ["Next.js", "Geocoding API", "Leaflet"],
           description:
-            "Mark locations, add trip details, and store logs with Leaflet and Geocoding API.",
+            "Map pinning & trip logs; Auto geocoding details; Fast response with React Hooks",
           link: "https://travel-log-app-topaz.vercel.app/",
         },
         {
           title: "VisualDev UI",
           tech: ["React", "Tailwind CSS"],
           description:
-            "A UI library with components and templates for marketing websites using React and Tailwind CSS.",
+            "Drag-and-drop UI library; Pre-built responsive templates; Real-time state updates",
           link: "https://visualdev-ui.vercel.app/",
+        },
+      ],
+    },
+    {
+      category: "Mobile Application Project",
+      items: [
+        {
+          title: "TravelMate",
+          tech: ["React Native", "Firebase", "Expo", "JavaScript (ES6+)"],
+          description:
+            "A mobile travel management app built with React Native that enables users to create, manage, and track trip details including expenses, packing lists, and photos; Leveraged Firebase Authentication, Firestore, and Storage for secure user management and real-time data synchronization; Implemented a modular navigation architecture using React Navigation with separate auth and main app stacks for maintainability.",
+          link: "#",
+          video:
+            "https://drive.google.com/file/d/1xtxHF7GIjDutTS-WNYSdjXf2DQK25Lbt/view?usp=sharing",
+          images: ["/RN1.png", "/RN2.png", "/RN3.png", "/RN4.png"],
         },
       ],
     },
@@ -34,29 +56,14 @@ const Projects = () => {
         {
           title: "Handwritten Digit Recognition",
           tech: ["Python", "TensorFlow", "Keras"],
-          description:
-            "Real-time handwritten digit recognition with TensorFlow, Keras, and a Tkinter-based UI. This project focuses on interactive learning and user engagement.",
+          description: "Real-time digit classification with a Tkinter UI",
           link: "#",
         },
         {
           title: "TED Persuasive Adjective Explorer",
           tech: ["Python", "SpaCy", "NLTK"],
-          description:
-            "Analysed TED talks to identify persuasive adjectives using SpaCy and NLTK. This project uncovers language trends in different fields.",
+          description: "Extract persuasive adjectives from TED talks",
           link: "#",
-        },
-      ],
-    },
-    {
-      category: "Mobile Application Project",
-      items: [
-        {
-          title: "Travel Assistant",
-          tech: ["React Native", "Firebase"],
-          description:
-            "A cross-platform app for managing trips, tracking expenses, and creating travel journals. Features include a packing list manager, real-time expense tracker, and photo uploads with comments.",
-          link: "#",
-          images: ["/RN1.png", "/RN2.png", "/RN3.png", "/RN4.png"],
         },
       ],
     },
@@ -64,7 +71,6 @@ const Projects = () => {
 
   return (
     <section className="bg-gray-900 text-gray-100 rounded-3xl shadow-2xl p-10 mx-auto mt-12 w-11/12 max-w-6xl relative">
-      {/* Projects */}
       {projects.map((projectGroup, index) => (
         <div key={projectGroup.category} className="mb-10">
           <h3 className="text-2xl font-bold text-purple-300 mb-6 text-center">
@@ -72,11 +78,11 @@ const Projects = () => {
           </h3>
           <div
             className={
-              index === 2
-                ? "grid grid-cols-1 gap-6"
+              index === 0
+                ? "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6"
                 : index === 1
-                ? "grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-6"
-                : "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"
+                ? "grid grid-cols-1 gap-6"
+                : "grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-6"
             }
           >
             {projectGroup.items.map((project) => (
@@ -84,7 +90,6 @@ const Projects = () => {
                 key={project.title}
                 className="bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-lg transform hover:-translate-y-2 transition duration-300"
               >
-                {/* 项目标题 */}
                 <h4 className="text-xl font-semibold text-purple-300 mb-2">
                   <a
                     href={project.link}
@@ -95,8 +100,6 @@ const Projects = () => {
                     {project.title}
                   </a>
                 </h4>
-
-                {/* 技术栈 */}
                 <div className="mb-3 flex flex-wrap gap-2">
                   {project.tech.map((tech) => (
                     <span
@@ -107,13 +110,11 @@ const Projects = () => {
                     </span>
                   ))}
                 </div>
-
-                {/* 描述 */}
-                <p className="text-gray-400 text-sm mb-4">
-                  {project.description}
-                </p>
-
-                {/* 移动项目的图片展示 */}
+                <ul className="text-gray-400 text-sm mb-4 list-disc list-inside">
+                  {project.description.split(";").map((line, idx) => (
+                    <li key={idx}>{line.trim()}</li>
+                  ))}
+                </ul>
                 {project.images && (
                   <div className="flex justify-center gap-20 mb-4">
                     {project.images.map((image, idx) => (
@@ -126,16 +127,48 @@ const Projects = () => {
                     ))}
                   </div>
                 )}
-
-                {/* 项目链接，仅当链接不是 "#" 时显示 */}
+                {project.video && (
+                  <div className="flex justify-center mb-4">
+                    <a
+                      href={project.video}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center bg-purple-500 text-white px-4 py-2 rounded-lg hover:bg-purple-600"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-5 w-5 mr-2"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                      >
+                        <path d="M4 4v12l12-6L4 4z" />
+                      </svg>
+                      Watch Video
+                    </a>
+                  </div>
+                )}
                 {project.link !== "#" && (
                   <a
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block text-purple-500 hover:underline"
+                    className="inline-flex items-center text-purple-500 hover:underline"
                   >
-                    View Project
+                    <span>View Project</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-4 w-4 ml-1"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M17 8l4 4m0 0l-4 4m4-4H3"
+                      />
+                    </svg>
                   </a>
                 )}
               </div>

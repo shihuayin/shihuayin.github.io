@@ -7,9 +7,18 @@ const EducationAndSkills = () => {
         Education & Skills
       </h2>
       <div className="mb-6">
-        <h3 className="text-lg font-bold text-text">
-          Goldsmiths, University of London
-        </h3>
+        <div className="flex items-center mb-2">
+          <img
+            src="/Goldsmith.png"
+            alt="Goldsmiths University Logo"
+            className="h-32
+             w-32
+           mr-4 object-contain"
+          />
+          <h3 className="text-lg font-bold text-text">
+            Goldsmiths, University of London
+          </h3>
+        </div>
         <p className="text-sm text-gray-400">
           Computer Science | Bachelor | September 2022 – Present
         </p>
@@ -19,7 +28,7 @@ const EducationAndSkills = () => {
           Data, Agile Software Projects, Artificial Intelligence.
         </p>
       </div>
-      <div>
+      {/* <div>
         <h3 className="text-lg font-bold text-text mb-2">Technical Skills</h3>
         <ul className="list-disc list-inside text-text">
           <li>Programming Languages: JavaScript, Python</li>
@@ -30,7 +39,7 @@ const EducationAndSkills = () => {
           </li>
           <li>Tools & Platforms: GitHub, Notion</li>
         </ul>
-      </div>
+      </div> */}
     </section>
   );
 };

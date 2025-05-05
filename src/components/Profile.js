@@ -82,7 +82,7 @@ const Profile = () => {
       {/* Links Section */}
       <div className="flex justify-center space-x-8 mt-12 relative z-10">
         <a
-          href="/me.pdf"
+          href="/SHIHUAYIN_CV.pdf"
           download
           className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white py-3 px-6 rounded-full shadow-md hover:shadow-xl transform hover:scale-105 transition duration-300"
         >
