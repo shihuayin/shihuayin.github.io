@@ -83,10 +83,10 @@
 //           <div
 //             className={
 //               index === 0
-//                 ? "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6"
+//                 ? "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4"
 //                 : index === 1
-//                 ? "grid grid-cols-1 gap-6"
-//                 : "grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-6"
+//                 ? "grid grid-cols-1 gap-4"
+//                 : "grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-4"
 //             }
 //           >
 //             {projectGroup.items.map((project) => (
@@ -120,13 +120,13 @@
 //                   ))}
 //                 </ul>
 //                 {project.images && (
-//                   <div className="flex justify-center gap-20 mb-4">
+//                   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-4 justify-items-center">
 //                     {project.images.map((src, idx) => (
 //                       <img
 //                         key={idx}
 //                         src={src}
 //                         alt={`Project ${project.title} Image ${idx + 1}`}
-//                         className="rounded-lg shadow-md h-96 w-48 object-cover"
+//                         className="rounded-lg shadow-md w-48 object-cover"
 //                       />
 //                     ))}
 //                   </div>
@@ -325,7 +325,7 @@ const Projects = () => {
                       href={project.video}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center bg-purple-500 text-white px-4 py-2 rounded-lg hover:bg-purple-600"
+                      className="inline-flex items-center bg-purple-500 text-white px-4 py-2 rounded-lg hover:bg-purple-600 transition"
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -344,12 +344,12 @@ const Projects = () => {
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center text-purple-500 hover:underline"
+                    className="mt-4 inline-flex items-center justify-center px-5 py-2 bg-purple-600 text-white font-semibold rounded-lg shadow-md hover:bg-purple-700 transition"
                   >
                     <span>View Project</span>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="h-4 w-4 ml-1"
+                      className="h-4 w-4 ml-2"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
