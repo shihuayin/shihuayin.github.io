@@ -1,4 +1,3 @@
-// Header.jsx
 import React from "react";
 
 const Header = () => {
@@ -13,26 +12,7 @@ const Header = () => {
           <ul className="flex space-x-6">
             <li>
               <a
-                href="#projects"
-                className="relative group transition text-text hover:text-primary"
-              >
-                Projects
-                {/* 下划线动画 */}
-                <span className="block h-0.5 bg-primary absolute left-0 -bottom-1 w-0 group-hover:w-full transition-all duration-300"></span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="#experience"
-                className="relative group transition text-text hover:text-primary"
-              >
-                Experience
-                <span className="block h-0.5 bg-primary absolute left-0 -bottom-1 w-0 group-hover:w-full transition-all duration-300"></span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="#contact"
+                href="mailto:shihuaok@gmail.com"
                 className="relative group transition text-text hover:text-primary"
               >
                 Contact
