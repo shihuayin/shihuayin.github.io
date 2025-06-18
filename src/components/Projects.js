@@ -178,7 +178,7 @@ const ProjectCard = ({ project }) => (
           >
             <path d="M4 4v12l12-6L4 4z" />
           </svg>
-          Watch Video Here
+          Watch Video Here!
         </a>
       </div>
     )}
