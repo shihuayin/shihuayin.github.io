@@ -8,7 +8,6 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "ajv": "^8.17.1",
-    "gh-pages": "^6.2.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-scripts": "5.0.1",
@@ -17,8 +16,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "npm run build && rm -rf docs && mkdir docs && cp -R build/. docs/ && touch docs/.nojekyll && git add docs && git commit -m \"chore(deploy): update docs/\" && git push origin main",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
