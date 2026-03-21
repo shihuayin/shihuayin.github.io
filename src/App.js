@@ -14,7 +14,7 @@ function App() {
         <EducationAndSkills />
       </main>
       <footer className="bg-card text-center py-4">
-        <p>© 2024 Shihua Yin. All rights reserved.</p>
+        <p>© 2026 Shihua Yin. All rights reserved.</p>
       </footer>
     </div>
   );
