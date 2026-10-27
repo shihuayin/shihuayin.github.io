@@ -44,27 +44,27 @@ const Profile = () => {
             </h4>
             <div className="flex flex-col items-center space-y-2">
               <span className="text-gray-300">
-                JavaScript, Python, HTML, CSS
+                JavaScript, Python, HTML5, CSS3
               </span>
             </div>
           </div>
 
-          {/* Frontend Frameworks */}
+          {/* Frontend Development */}
           <div className="bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-lg transform hover:-translate-y-2 transition duration-300">
             <h4 className="text-xl font-bold text-indigo-400 mb-2">
-              Frontend Frameworks
+              Frontend Development
             </h4>
             <p className="text-gray-300">
-              React, Next.js, React Native, Context API, Bootstrap, Tailwind CSS
+              React, React Router, Context API, React Native, Recharts, Tailwind CSS, Reusable UI Components, Figma-to-Code
             </p>
           </div>
 
-          {/* Backend Frameworks */}
+          {/* Backend Development */}
           <div className="bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-lg transform hover:-translate-y-2 transition duration-300">
             <h4 className="text-xl font-bold text-indigo-400 mb-2">
-              Backend Frameworks
+              Backend Development
             </h4>
-            <p className="text-gray-300">Node.js, Express.js, REST APIs</p>
+            <p className="text-gray-300">Python, FastAPI, Pydantic, RESTful APIs</p>
           </div>
 
           {/* Databases */}
@@ -72,26 +72,38 @@ const Profile = () => {
             <h4 className="text-xl font-bold text-indigo-400 mb-2">
               Databases
             </h4>
-            <p className="text-gray-300">MySQL, MongoDB, Firebase</p>
+            <p className="text-gray-300">MongoDB</p>
           </div>
 
-          {/* Cloud & DevOps */}
+          {/* Project Deployment */}
           <div className="bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-lg transform hover:-translate-y-2 transition duration-300">
             <h4 className="text-xl font-bold text-indigo-400 mb-2">
-              Cloud & DevOps
+              Project Deployment
             </h4>
             <p className="text-gray-300">
-              Firebase Hosting, CI/CD (GitHub Actions), Git
+              AWS Lightsail, Amazon S3, Docker, Nginx, GitHub Actions
+            </p>
+            <p className="text-sm text-gray-400 mt-3">
+              Introductory experience through personal projects
             </p>
           </div>
 
-          {/* Design Tools */}
-          {/* <div className="bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-lg transform hover:-translate-y-2 transition duration-300">
+          <div className="bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-lg transform hover:-translate-y-2 transition duration-300">
             <h4 className="text-xl font-bold text-indigo-400 mb-2">
-              Design Tools
+              AI & Access Control
             </h4>
-            <p className="text-gray-300">Figma, Balsamiq</p>
-          </div> */}
+            <p className="text-gray-300">
+              LLM API Integration, Context-Based Content Generation,
+              Conversational Editing, ACLs, Role & Permission Checks
+            </p>
+          </div>
+
+          <div className="bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-lg transform hover:-translate-y-2 transition duration-300">
+            <h4 className="text-xl font-bold text-indigo-400 mb-2">
+              Development Tools
+            </h4>
+            <p className="text-gray-300">Git, GitHub, Vite</p>
+          </div>
         </div>
       </div>
 
