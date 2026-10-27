@@ -30,9 +30,12 @@ const Profile = () => {
       <div className="mt-8 text-center relative z-10">
         <h3 className="text-2xl font-semibold text-indigo-400">About Me</h3>
         <p className="text-gray-300 mt-4 leading-relaxed">
-          A Computer Science student driven by a passion for web development,
-          skilled in creating efficient and user-friendly applications, and
-          eager to take on new challenges to grow and improve.
+          Software Developer with professional experience building full-stack web
+          applications using React, JavaScript, Python and FastAPI. Experienced in
+          developing interactive dashboards, reusable UI components and RESTful APIs.
+          I enjoy collaborating with product managers and designers to turn ideas
+          into practical, user-friendly features and solving problems across
+          frontend and backend systems.
         </p>
 
         {/* Skills Cards */}
@@ -64,7 +67,7 @@ const Profile = () => {
             <h4 className="text-xl font-bold text-indigo-400 mb-2">
               Backend Development
             </h4>
-            <p className="text-gray-300">Python, FastAPI, Pydantic, RESTful APIs</p>
+            <p className="text-gray-300">Python, FastAPI, Pydantic, Node.js, Express.js, RESTful APIs</p>
           </div>
 
           {/* Databases */}
@@ -72,42 +75,26 @@ const Profile = () => {
             <h4 className="text-xl font-bold text-indigo-400 mb-2">
               Databases
             </h4>
-            <p className="text-gray-300">MongoDB</p>
+            <p className="text-gray-300">MySQL, MongoDB, Firebase</p>
           </div>
 
-          {/* Project Deployment */}
+          {/* Development & Deployment */}
           <div className="bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-lg transform hover:-translate-y-2 transition duration-300">
             <h4 className="text-xl font-bold text-indigo-400 mb-2">
-              Project Deployment
+              Development & Deployment
             </h4>
             <p className="text-gray-300">
-              AWS Lightsail, Amazon S3, Docker, Nginx, GitHub Actions
-            </p>
-            <p className="text-sm text-gray-400 mt-3">
-              Introductory experience through personal projects
+              Git, GitHub, Vite, Amazon S3, Docker, Nginx, GitHub Actions
             </p>
           </div>
 
-          <div className="bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-lg transform hover:-translate-y-2 transition duration-300">
-            <h4 className="text-xl font-bold text-indigo-400 mb-2">
-              AI & Access Control
-            </h4>
-            <p className="text-gray-300">
-              LLM API Integration, Context-Based Content Generation,
-              Conversational Editing, ACLs, Role & Permission Checks
-            </p>
-          </div>
 
-          <div className="bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-lg transform hover:-translate-y-2 transition duration-300">
-            <h4 className="text-xl font-bold text-indigo-400 mb-2">
-              Development Tools
-            </h4>
-            <p className="text-gray-300">Git, GitHub, Vite</p>
-          </div>
+
+
         </div>
       </div>
 
-      {/* Links Section */}
+      {/* Links Section temporarily hidden
       <div className="flex justify-center space-x-8 mt-12 relative z-10">
         <a
           href="/SHIHUAYIN_CV.pdf"
@@ -123,6 +110,7 @@ const Profile = () => {
           Email
         </a>
       </div>
+      */}
     </section>
   );
 };
