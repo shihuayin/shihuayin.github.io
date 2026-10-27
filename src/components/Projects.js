@@ -17,13 +17,6 @@ const Projects = () => {
           link: "https://54.247.150.106/login",
         },
         {
-          title: "Real-time Collaborative Kanban System",
-          tech: ["React", "Firebase", "Tailwind CSS", "Recharts"],
-          description:
-            "Three-tier board→column→card model;150+ cards drag-and-drop with real-time Firestore sync",
-          link: "https://kanban-mvp.vercel.app/",
-        },
-        {
           title: "Financial Management Tool",
           tech: ["React", "Firebase", "Recharts"],
           description:
@@ -85,20 +78,11 @@ const Projects = () => {
           </h3>
 
           {gi === 0 ? (
-            <>
-              {/* 第一行：前两个项目 */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-                {group.items.slice(0, 2).map((p) => (
-                  <ProjectCard key={p.title} project={p} />
-                ))}
-              </div>
-              {/* Remaining projects */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {group.items.slice(2).map((p) => (
-                  <ProjectCard key={p.title} project={p} />
-                ))}
-              </div>
-            </>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {group.items.map((p) => (
+                <ProjectCard key={p.title} project={p} />
+              ))}
+            </div>
           ) : (
             <div
               className={
