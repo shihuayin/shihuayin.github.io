@@ -103,7 +103,7 @@ const Projects = () => {
 };
 
 const ProjectCard = ({ project }) => (
-  <div className="bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-lg transform hover:-translate-y-2 transition duration-300">
+  <div className="flex h-full flex-col bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-lg transform hover:-translate-y-2 transition duration-300">
     <h4 className="text-xl font-semibold text-purple-300 mb-2">
       <a
         href={project.link}
@@ -178,7 +178,7 @@ const ProjectCard = ({ project }) => (
         href={project.link}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex items-center justify-center px-5 py-2 bg-purple-600 text-white font-semiboldrounded-lg shadow-md hover:bg-purple-700 transition"
+        className="mt-auto self-start inline-flex items-center justify-center px-5 py-2 bg-purple-600 text-white font-semibold rounded-lg shadow-md hover:bg-purple-700 transition"
       >
         <span>View Project</span>
         <svg
