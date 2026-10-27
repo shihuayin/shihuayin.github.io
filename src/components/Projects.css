@@ -1,0 +1,54 @@
+.personal-projects-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.25rem;
+}
+
+.project-card {
+  min-width: 0;
+}
+
+.project-card__title {
+  overflow-wrap: anywhere;
+  line-height: 1.4;
+}
+
+.project-card__tags {
+  align-content: start;
+  align-items: start;
+}
+
+.project-card__description {
+  line-height: 1.65;
+}
+
+@media (min-width: 1024px) {
+  .personal-projects-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 1.25rem;
+    row-gap: 1rem;
+  }
+
+  .project-card--featured {
+    display: grid;
+    grid-row: span 4;
+    grid-template-rows: subgrid;
+    row-gap: 1rem;
+  }
+
+  .project-card--featured .project-card__title,
+  .project-card--featured .project-card__tags,
+  .project-card--featured .project-card__description {
+    margin: 0;
+  }
+
+  .project-card--featured .project-card__tags {
+    align-self: start;
+  }
+
+  .project-card--featured .project-card__link {
+    justify-self: start;
+    align-self: end;
+    margin-top: 0;
+  }
+}

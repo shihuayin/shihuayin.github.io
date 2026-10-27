@@ -1,3 +1,4 @@
+import "./Projects.css";
 import RN1 from "../assets/RN1.png";
 import RN2 from "../assets/RN2.png";
 import RN3 from "../assets/RN3.png";
@@ -10,24 +11,24 @@ const Projects = () => {
       category: "Personal Projects",
       items: [
         {
-          title: "Violet Expense — Expense Reimbursement Platform",
+          title: "Violet Expense",
           tech: ["React", "FastAPI", "MongoDB", "Docker", "AWS"],
           description:
-            "Expense submission, approval & payment tracking;Role-based access for employees, managers & admins;No-sign-up demo with role switching & isolated workspaces",
+            "Submit expenses and follow manager approval, finance review and payment status;Role-based access for employees, managers and administrators;Try the full workflow without signing up, with isolated demo data and role switching;Built with React, FastAPI and MongoDB, deployed on AWS using Docker",
           link: "https://54.247.150.106/login",
         },
         {
           title: "Financial Management Tool",
           tech: ["React", "Firebase", "Recharts"],
           description:
-            "Budget management;Interactive pie & line charts;Real-time filtering",
+            "Create, edit and delete financial records with descriptions, amounts, types and dates;Filter transactions by description, category and date range;Explore financial metrics and category breakdowns with interactive pie and line charts;Store records in Firebase Firestore with real-time updates",
           link: "https://personal-finance-app-amber.vercel.app/",
         },
         {
           title: "Stock Data Dashboard",
           tech: ["Python", "FastAPI", "React"],
           description:
-            "Historical prices & analyst ratings;News sentiment word clouds;Interactive Recharts graphs",
+            "Explore historical stock prices and analyst ratings in one dashboard;View related news and word clouds to explore market sentiment;Compare closing-price trends through interactive Recharts line charts;React views connect to Python and FastAPI services using yfinance and NewsAPI",
           link: "https://stock-two-alpha.vercel.app/",
         },
       ],
@@ -78,9 +79,9 @@ const Projects = () => {
           </h3>
 
           {gi === 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="personal-projects-grid">
               {group.items.map((p) => (
-                <ProjectCard key={p.title} project={p} />
+                <ProjectCard key={p.title} project={p} featured />
               ))}
             </div>
           ) : (
@@ -102,9 +103,9 @@ const Projects = () => {
   );
 };
 
-const ProjectCard = ({ project }) => (
-  <div className="flex h-full flex-col bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-lg transform hover:-translate-y-2 transition duration-300">
-    <h4 className="text-xl font-semibold text-purple-300 mb-2">
+const ProjectCard = ({ project, featured = false }) => (
+  <div className={`project-card ${featured ? "project-card--featured" : ""} flex h-full flex-col bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-lg transform hover:-translate-y-2 transition duration-300`}>
+    <h4 className="project-card__title text-xl font-semibold text-purple-300 mb-2">
       <a
         href={project.link}
         target={project.link !== "#" ? "_blank" : "_self"}
@@ -114,7 +115,7 @@ const ProjectCard = ({ project }) => (
         {project.title}
       </a>
     </h4>
-    <div className="mb-3 flex flex-wrap gap-2">
+    <div className="project-card__tags mb-3 flex flex-wrap gap-2">
       {project.tech.map((t) => (
         <span
           key={t}
@@ -124,7 +125,7 @@ const ProjectCard = ({ project }) => (
         </span>
       ))}
     </div>
-    <ul className="text-gray-400 text-sm mb-4 list-disc list-inside space-y-1">
+    <ul className="project-card__description text-gray-400 text-sm mb-4 list-disc list-inside space-y-1">
       {project.description.split(";").map((line, idx) => (
         <li key={idx}>{line.trim()}</li>
       ))}
@@ -178,7 +179,7 @@ const ProjectCard = ({ project }) => (
         href={project.link}
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-auto self-start inline-flex items-center justify-center px-5 py-2 bg-purple-600 text-white font-semibold rounded-lg shadow-md hover:bg-purple-700 transition"
+        className="project-card__link mt-auto self-start inline-flex items-center justify-center px-5 py-2 bg-purple-600 text-white font-semibold rounded-lg shadow-md hover:bg-purple-700 transition"
       >
         <span>View Project</span>
         <svg
