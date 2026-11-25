@@ -15,7 +15,7 @@ const Projects = () => {
           tech: ["React", "FastAPI", "MongoDB", "Docker", "AWS"],
           description:
             "Submit expenses and follow manager approval, finance review and payment status;Role-based access for employees, managers and administrators;Try the full workflow without signing up, with isolated demo data and role switching;Built with React, FastAPI and MongoDB, deployed on AWS using Docker",
-          link: "https://54.247.150.106/login",
+          link: "https://expense.shihuayin.dev/",
         },
         {
           title: "Financial Management Tool",
