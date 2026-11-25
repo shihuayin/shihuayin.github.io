@@ -20,7 +20,7 @@ const EducationAndSkills = () => {
           </h3>
         </div>
         <p className="text-sm text-gray-400">
-          Computer Science | Bachelor | September 2022 – Present
+          Computer Science | Bachelor | September 2022 – June 2025
         </p>
         <p className="text-text mt-2">
           Course Modules: Web Development, Databases and the Web, Software
