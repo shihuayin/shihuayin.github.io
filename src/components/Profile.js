@@ -94,23 +94,15 @@ const Profile = () => {
         </div>
       </div>
 
-      {/* Links Section temporarily hidden
-      <div className="flex justify-center space-x-8 mt-12 relative z-10">
+      <div className="flex justify-center mt-10 relative z-10">
         <a
-          href="/SHIHUAYIN_CV.pdf"
-          download
-          className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white py-3 px-6 rounded-full shadow-md hover:shadow-xl transform hover:scale-105 transition duration-300"
+          href={`${process.env.PUBLIC_URL}/SHIHUAYIN_CV.pdf`}
+          download="SHIHUAYIN_CV.pdf"
+          className="inline-flex items-center justify-center bg-gradient-to-r from-indigo-500 to-purple-600 text-white py-3 px-6 rounded-full shadow-md hover:shadow-xl transform hover:scale-105 transition duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
         >
           Download CV
         </a>
-        <a
-          href="mailto:shihuaok@gmail.com"
-          className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white py-3 px-6 rounded-full shadow-md hover:shadow-xl transform hover:scale-105 transition duration-300"
-        >
-          Email
-        </a>
       </div>
-      */}
     </section>
   );
 };
