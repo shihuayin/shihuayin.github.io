@@ -11,6 +11,13 @@ const Projects = () => {
       category: "Personal Projects",
       items: [
         {
+          title: "Atlas | Bristol Infrastructure Explorer",
+          tech: ["React", "Leaflet", "FastAPI", "PostGIS", "GeoPandas"],
+          description:
+            "Explore 253 OpenStreetMap features representing schools, hospitals and rail stations in the Bristol area;Run radius and polygon queries on the interactive map using PostGIS spatial indexes;Import and export point data in WGS 84, British National Grid or Web Mercator;Deployed on Vercel with Neon PostGIS",
+          link: "https://atlas-vercel-upload-eight.vercel.app/",
+        },
+        {
           title: "Violet Expense",
           tech: ["React", "FastAPI", "MongoDB", "Docker", "AWS"],
           description:
