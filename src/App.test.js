@@ -1,8 +1,13 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('links the Atlas GIS project to its live demo', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const projectLink = screen.getByRole('link', {
+    name: 'Atlas | Bristol Infrastructure Explorer',
+  });
+  expect(projectLink).toHaveAttribute(
+    'href',
+    'https://atlas-vercel-upload-eight.vercel.app/'
+  );
 });
